@@ -175,31 +175,21 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Sparse LiDAR point clouds cause severe loss of detail of static structures and reduce the density of static points available for navigation. 
+            Reduced density can be detrimental to navigation under several scenarios. 
+            We observe that despite high sparsity, in most cases, the global topology of LiDAR outlining the static structures can be inferred.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            We utilize this property to obtain a backbone skeleton of a static LiDAR scan in the form of a single connected component that is a proxy to its global topology. 
+            We utilize the backbone to augment new points along static structures to overcome sparsity. Newly introduced points could correspond to existing static structures or to static points that were earlier obstructed by dynamic objects. 
+            To the best of our knowledge, we are the first to use this strategy for sparse LiDAR point clouds. Existing solutions close to our approach fail to identify and preserve the global static LiDAR topology and generate sub-optimal points. 
+            
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We propose GLiDR, a Graph Generative network that is topologically regularized using 0-dimensional Persistent Homology (PH) constraints. 
+            This enables GLiDR to introduce newer static points along a topologically consistent global static LiDAR backbone. GLiDR generates precise static points using 32x sparser dynamic scans and performs better than the baselines across three datasets. 
+            The newly introduced static points allow GLiDR to outperform LiDAR-based navigation using SLAM in several settings. 
+            GLiDR generates a valuable byproduct - an accurate binary segmentation mask of static and dynamic objects that is helpful for navigation planning and safety in constrained environments.
           </p>
         </div>
       </div>
@@ -207,12 +197,23 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Approach</h2>
+        <div class="publication-img">
+          <img src="./static/images/full-arch.pdf"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          
         </div>
       </div>
     </div>
@@ -328,7 +329,7 @@
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -351,7 +352,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Concurrent Work. -->
 
   </div>
@@ -361,11 +362,13 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{kumar2023glidr,
+      title={GLiDR: Topologically Regularized Graph Generative Network for Sparse LiDAR Point Clouds}, 
+      author={Prashant Kumar and Kshitij Madhav Bhat and Vedang Bhupesh Shenvi Nadkarni and Prem Kalra},
+      year={2023},
+      eprint={2312.00068},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
 }</code></pre>
   </div>
 </section>
