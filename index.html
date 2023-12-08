@@ -98,7 +98,7 @@
               <a>Vedang Bhupesh Shenvi Nadkarni</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.cse.iitd.ac.in/~pkalra/">Prem Kalra</a><sup>1</sup>,
+              <a href="https://www.cse.iitd.ac.in/~pkalra/">Prem Kalra</a><sup>1</sup>
             </span>
           </div>
 
@@ -174,6 +174,11 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
+          <div class="approach-img">
+            <img src="./static/images/glidr.png"
+                   class="interpolation-image"
+                   alt="Interpolate start reference image."/>
+          </div>
           <p>
             Sparse LiDAR point clouds cause severe loss of detail of static structures and reduce the density of static points available for navigation. 
             Reduced density can be detrimental to navigation under several scenarios. 
@@ -196,6 +201,8 @@
     </div>
     <!--/ Abstract. -->
 
+    
+    
     <!-- Paper video. -->
     <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -206,16 +213,6 @@
         </div>
       </div>
     </div> -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Approach</h2>
-        <div class="publication-img">
-          <img src="./static/images/full-arch.png"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-        </div>
-      </div>
-    </div>
     <!--/ Paper video. -->
   </div>
 </section>
@@ -263,12 +260,12 @@
     <!--/ Matting. -->
 
     <!-- Animation. -->
-    <div class="columns is-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Video</h2>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <!-- <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -298,17 +295,17 @@
             <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
+        <br/> -->
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
             viewpoint such as a stabilized camera by playing back the training deformations.
           </p>
-        </div>
+        </div> -->
         <div class="content has-text-centered">
           <video id="replay-video"
                  controls
@@ -316,9 +313,27 @@
                  preload
                  playsinline
                  width="75%">
-            <source src="./static/videos/replay.mp4"
+            <source src="./static/videos/Segmentation_Mask_Demo.mp4"
                     type="video/mp4">
           </video>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Method Overview</h2>
+            <div class="approach-img">
+              <img src="./static/images/full-arch.png"
+                     class="interpolation-image"
+                     alt="Interpolate start reference image."/>
+            </div>
+          </div>
+        </div>
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <p>
+              GLiDR network architecture with the generative LiDAR graph layers (upper branch). The lower branches constitute the 0-dim PH constraints and generate the topological loss.
+            </p>
+          </div>
         </div>
         <!--/ Re-rendering. -->
 
@@ -377,23 +392,23 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://arxiv.org/pdf/2312.00068.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/KshitijBhat" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <p>
+          <!-- <p>
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+          </p> -->
           <p>
-            Webpage Credit: <a
+            This project is inspired by <a
               href="https://github.com/nerfies/nerfies.github.io">nerfies.github.io</a> 
           </p>
         </div>
