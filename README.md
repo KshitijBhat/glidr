@@ -4,13 +4,13 @@ This is the repository that contains source code for the [GLiDR website](https:/
 
 If you find GLiDR useful for your work please cite:
 ```
-@article{kumar2024glidr,
-    title={GLiDR: Topologically Regularized Graph Generative Network for Sparse LiDAR Point Clouds},
-    author={Prashant Kumar and Kshitij Madhav Bhat and Vedang Bhupesh Shenvi Nadkarni and Prem Kalra},
-    year={2024},
-    eprint={2312.00068},
-    archivePrefix={arXiv},
-    primaryClass={cs.RO}  
+@InProceedings{Kumar_2024_CVPR,
+    author    = {Kumar, Prashant and Bhat, Kshitij Madhav and Nadkarni, Vedang Bhupesh Shenvi and Kalra, Prem},
+    title     = {GLiDR: Topologically Regularized Graph Generative Network for Sparse LiDAR Point Clouds},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {15152-15161}
 }
 ```
 
